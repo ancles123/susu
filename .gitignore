@@ -1,0 +1,61 @@
+# ═══════════════════════════════════════════════════════════════
+#  GITIGNORE — Susupreneur POS
+#  File yang TIDAK boleh masuk repository GitHub
+# ═══════════════════════════════════════════════════════════════
+
+# ─── KREDENSIAL & KONFIGURASI LOKAL (WAJIB DIABAIKAN) ───
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ─── DEPENDENSI PHP (install via composer install) ───
+vendor/
+composer.lock
+
+# ─── DEPENDENSI NODE (jika ada) ───
+node_modules/
+package-lock.json
+
+# ─── FILE RUNTIME & CACHE ───
+writable/cache/*
+writable/logs/*
+writable/session/*
+writable/uploads/*
+writable/debugbar/*
+!writable/cache/.htaccess
+!writable/logs/.htaccess
+!writable/session/.htaccess
+!writable/uploads/.htaccess
+!writable/debugbar/.htaccess
+
+# ─── FILE SISTEM & EDITOR ───
+Thumbs.db
+Desktop.ini
+.DS_Store
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# ─── BUILD & OUTPUT ───
+build/
+dist/
+coverage/
+phpunit.xml
+.phpunit.result.cache
+
+# ─── BACKUP & TEMPORARY ───
+*.bak
+*.backup
+*.tmp
+*.swp
+*.swo
+*~
+._*
+
+# ─── UPLOAD USER (jika ada folder uploads di public) ───
+public/uploads/*
+!public/uploads/.htaccess
